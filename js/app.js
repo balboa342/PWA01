@@ -3,7 +3,7 @@ const birds = [
   { name: "California Gull", image: "images/CaliGull.png" },
   { name: "Cardinal", image: "images/Cardinal.png" },
   { name: "Chicken", image: "images/Chicken.png" },
-  { name: "Meadowlard", image: "images/Meadowlark.png" },
+  { name: "Meadowlark", image: "images/Meadowlark.png" },
   { name: "Mockingbird", image: "images/Mockingbird.png" }
 ]
 
