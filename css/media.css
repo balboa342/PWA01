@@ -26,7 +26,7 @@ only screen and (max-width: 760px),
    }
    td:before {
     /* Now like a table header */
-    postion:  absolute;
+    position:  absolute;
     /* Top/left values mimic padding */
     top:  6px;
     left: 6px;
