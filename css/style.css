@@ -29,7 +29,7 @@ table {
 	border-collapse: collapse;
 }
 /* zebra striping  */
-tr:nth-of-type(odd){
+tr:nth-child(odd){
 	background: #EEEEEE;
 }
 th {
