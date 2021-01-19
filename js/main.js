@@ -1,3 +1,4 @@
+/*
 function regSW(){
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js');
@@ -10,8 +11,8 @@ document.querySelector('#show').addEventListener('click', () => {
   document.querySelector('#container').appendChild(imgElement);
 });
 }
+*/
 
-/*
 window.onload = () => {
 	'use strict';
 	
@@ -19,4 +20,4 @@ window.onload = () => {
 		navigator.serviceWorker.register('./sw.js');
 	}
 }
-*/
+
