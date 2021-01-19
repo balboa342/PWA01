@@ -1,45 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-	font-family: sans-serif;
+  background: #fdfdfd;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  display: flex;
 }
 
-/*Make content area fill the entire browser window */
-html,
-.fullscreen {
-	display: flex;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+li {
+  margin-right: 1rem;
 }
-
-/* Center the content in the browser window */
-.container {
-	margin: auto;
-	text-align: center;
+h1 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
 }
-
-.title{
-	font-size: 3rem;
-}
-/*
-Generic styling, for Desktops/Laptops
-*/
-table {
-	width: 100%;
-	border-collapse: collapse;
-}
-/* zebra striping  */
-tr:nth-child(odd){
-	background: #EEEEEE;
-}
-th {
-	background: #333333;
-	color: white;
-	font-weight: bold;
-}
-td, th {
-	padding: 6px;
-	border: 1px solid #CCCCCC;
-	text-align: left;
-}
-		
