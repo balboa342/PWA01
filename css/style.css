@@ -2,18 +2,9 @@ body {
 	font-family: sans-serif;
 }
 
-/*Make content area fill the entire browser window 
+/*Make content area fill the entire browser window */
 html,
 .fullscreen {
-	display: flex;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-*/
-html,
-.standalone {
 	display: flex;
 	height: 100%;
 	margin: 0;
