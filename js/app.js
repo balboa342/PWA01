@@ -1,19 +1,15 @@
 const container = document.querySelector(".container")
-const coffees = [
-  { name: "Perspiciatis", image: "images/coffee1.jpg" },
-  { name: "Voluptatem", image: "images/coffee2.jpg" },
-  { name: "Explicabo", image: "images/coffee3.jpg" },
-  { name: "Rchitecto", image: "images/coffee4.jpg" },
-  { name: " Beatae", image: "images/coffee5.jpg" },
-  { name: " Vitae", image: "images/coffee6.jpg" },
-  { name: "Inventore", image: "images/coffee7.jpg" },
-  { name: "Veritatis", image: "images/coffee8.jpg" },
-  { name: "Accusantium", image: "images/coffee9.jpg" },
+const birds = [
+  { name: "California Gull", image: "images/CaliGull.png" },
+  { name: "Cardinal", image: "images/Cardinal.png" },
+  { name: "Chicken", image: "images/Chicken.png" },
+  { name: "Meadowlard", image: "images/Meadowlard.png" },
+  { name: "Mockingbird", image: "images/Mockingbird.png" }
 ]
 
-const showCoffees = () => {
+const showBirds = () => {
   let output = ""
-  coffees.forEach(
+  birds.forEach(
     ({ name, image }) =>
       (output += `
               <div class="card">
@@ -26,4 +22,4 @@ const showCoffees = () => {
   container.innerHTML = output
 }
 
-document.addEventListener("DOMContentLoaded", showCoffees);
+document.addEventListener("DOMContentLoaded", showBirds);
