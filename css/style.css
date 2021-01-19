@@ -21,3 +21,25 @@ html,
 .title{
 	font-size: 3rem;
 }
+/*
+Generic styling, for Desktops/Laptops
+*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* zebra striping  */
+tr:nth-of-type(odd){
+	background: #EEEEEE;
+}
+th {
+	background: #333333;
+	color: white;
+	font-weight: bold;
+}
+td, th {
+	padding: 6px;
+	border: 1 px solid #CCCCCC;
+	text-align: left;
+}
+		
