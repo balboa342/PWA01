@@ -1,12 +1,13 @@
 const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 
+const staticStateBirds = "state-birds-site-v1"
 // A list of local resources we always want to be cached.
-const PRECACHE_URLS = [
+const assets = [
   'index.html',
   './', // Alias for index.html
   'css/style.css',
-  'js/main.js',
+  'js/app.js',
   'images/hello-icon-128.png',
   'images/hello-icon-144.png',
   'images/hello-icon-152.png',
