@@ -1,12 +1,6 @@
 {
 	"name": "State Birds",
 	"short_name": "Birds",
-	"lang": "en-US",
-	"start_url": "PWA01/index.html",
-	"display": "standalone",
-	"prefer_related_applications": false,
-	"background_color": "white",
-	"theme_color": "white",
 	"icons": [{
 		"src": "images/hello-icon-128.png",
 		"sizes": "128x128",
@@ -42,5 +36,11 @@
 		"sizes": "512x512",
 		"type": "image/png",
 		"purpose": "any"
-	}]
+	}],
+	"lang": "en-US",
+	"start_url": "/PWA01/index.html",
+	"display": "standalone",
+	"prefer_related_applications": false,
+	"background_color": "white",
+	"theme_color": "white",
 }
