@@ -4,7 +4,7 @@ const RUNTIME = 'runtime';
 const staticStateBirds = "state-birds-site-v1"
 // A list of local resources we always want to be cached.
 const assets = [
-  'PWA01/index.html',
+  'index.html',
   './', // Alias for index.html
   'css/style.css',
   'js/app.js',
