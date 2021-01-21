@@ -7,9 +7,9 @@ const birds = [
   { name: "Mockingbird", image: "images/Mockingbird.png" }
 ];
 
-const showCoffees = () => {
+const showBirds = () => {
   let output = "";
-  coffees.forEach(
+  birds.forEach(
     ({ name, image }) =>
       (output += '
               <div class="card">
@@ -22,5 +22,5 @@ const showCoffees = () => {
   container.innerHTML = output;
 }
 
-document.addEventListener("DOMContentLoaded", showCoffees);
+document.addEventListener("DOMContentLoaded", showBirds);
 
