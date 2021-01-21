@@ -1,36 +1,48 @@
 const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 
-const staticStateBirds = "state-birds-site-v1"
 // A list of local resources we always want to be cached.
-const assets = [
-  '/index.html',
+const PRECACHE_URLS = [
+  'index.html',
   './', // Alias for index.html
-  '/css/style.css',
-  '/js/app.js',
-  '/images/hello-icon-128.png',
-  '/images/hello-icon-144.png',
-  '/images/hello-icon-152.png',
-  '/images/hello-icon-192.png',
-  '/images/hello-icon-196maskable.png',
-  '/images/hello-icon-256.png',
-  '/images/hello-icon-512.png',
-  '/images/Cardinal.png',
-  '/images/CaliGuyll.png',
-  '/images/Chicken.png',
-  '/images/Meadowlark.png',
-  '/images/Mockingbird.png',
-  '/favicon.ico',
-  '/sw.js'
+  'css/style.css',
+  'js/app.js',
+  'images/hello-icon-128.png',
+  'images/hello-icon-144.png',
+  'images/hello-icon-152.png',
+  'images/hello-icon-192.png',
+  'images/hello-icon-196maskable.png',
+  'images/hello-icon-256.png',
+  'images/hello-icon-512.png',
+  'images/Cardinal.png',
+  'images/CaliGuyll.png',
+  'images/Chicken.png',
+  'images/Meadowlark.png',
+  'images/Mockingbird.png',
+  'favicon.ico',
+  'sw.js'
 ];
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(staticStateBirds).then(cache => {
-      cache.addAll(assets)
-    })
-  )
-})
+    caches.open(PRECACHE)
+    .then(cache => cache.addAll(PRECACHE_URLS))
+    .then(self.skipWaiting())
+    );
+});
+
+self.addEventListener('activate', event => {
+  const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(CachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
+      }));
+    }).then(() => self.clients.claim())
+    );
+});
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
