@@ -1,5 +1,3 @@
-function ShowBirds(){
-
 const container = document.querySelector(".container");
 const birds = [
   { name: "Cardinal", image: "images/Cardinal.png" },
@@ -9,8 +7,9 @@ const birds = [
   { name: "Mockingbird", image: "images/Mockingbird.png" }
 ];
 
+const showCoffees = () => {
   let output = "";
-  birds.forEach(
+  coffees.forEach(
     ({ name, image }) =>
       (output += '
               <div class="card">
@@ -19,23 +18,9 @@ const birds = [
                 <a class="card--link" href="#">Taste</a>
               </div>
               ')
-  );
-  container.innerHTML = output;
-  
-  /*
-  const showBirds = () => {
-  let output = ""
-  birds.forEach(
-    ({ name, image }) =>
-      (output += `
-              <div class="card">
-                <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${name}</h1>
-                <a class="card--link" href="#">Taste</a>
-              </div>
-              `)
   )
-  container.innerHTML = output
-  */
-//document.addEventListener("DOMContentLoaded", showBirds)
+  container.innerHTML = output;
 }
+
+document.addEventListener("DOMContentLoaded", showCoffees);
+
